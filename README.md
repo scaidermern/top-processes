@@ -2,7 +2,7 @@
 Displays Linux' top processes according to their *current* CPU or memory usage during the given sampling time.
 
 ## Dependencies
-[libprocps](https://gitlab.com/procps-ng/procps)
+[libprocps](https://gitlab.com/procps-ng/procps) (can be dropped with a little more work)
 
 ## Example
 ```
