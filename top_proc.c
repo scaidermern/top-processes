@@ -144,7 +144,6 @@ void sample_processes(
     unsigned int pos1 = 0, pos2 = 0;
     unsigned int newpos = 0;
     while (pos1 < procs1_len && pos2 < procs2_len) {
-        //printf("pos1: %d, pos2: %d\n", pos1, pos2);
         if (procs1[pos1]->tid < procs2[pos2]->tid) {
             ++pos1;
         } else if (procs1[pos1]->tid > procs2[pos2]->tid) {
