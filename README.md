@@ -23,5 +23,5 @@ PID        CPU        <RSS>      CMD
 ```
 
 ## License
-[CC0 1.0 Universal](https://creativecommons.org/publicdomain/zero/1.0/legalcode)
+[GNU General Public License v2.0](https://www.gnu.org/licenses/gpl-2.0.txt) (might change to CC0 in the future after dropping libprocps dependency)
 (c) [Alexander Heinlein](http://choerbaert.org)
