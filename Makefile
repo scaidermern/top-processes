@@ -7,7 +7,7 @@ OBJS=$(subst .c,.o,$(SRCS))
 all: example
 
 example: $(OBJS)
-	$(CC) $(CFLAGS) $(LDLIBS) $(OBJS) -o top_proc_example
+	$(CC) $(CFLAGS) $(OBJS) $(LDLIBS) -o top_proc_example
 
 clean:
 	rm $(OBJS) top_proc_example
