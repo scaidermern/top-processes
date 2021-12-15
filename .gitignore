@@ -31,3 +31,5 @@
 # Debug files
 *.dSYM/
 *.su
+
+top_proc_example

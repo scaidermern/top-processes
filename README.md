@@ -1,9 +1,6 @@
 # top processes
 Displays Linux' top processes according to their *current* CPU or memory usage during the given sampling time.
 
-## Dependencies
-[libprocps](https://gitlab.com/procps-ng/procps) (can be dropped with a little more work)
-
 ## Example
 ```
 $ ./top_proc_example
@@ -23,5 +20,5 @@ PID        CPU        <RSS>      CMD
 ```
 
 ## License
-[GNU General Public License v2.0](https://www.gnu.org/licenses/gpl-2.0.txt) (might change to CC0 in the future after dropping libprocps dependency)
+[CC0 1.0](https://creativecommons.org/publicdomain/zero/1.0/legalcode)
 (c) [Alexander Heinlein](http://choerbaert.org)

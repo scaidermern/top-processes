@@ -1,13 +1,15 @@
-CFLAGS=-Wall -Wextra
-LDLIBS=-lprocps
+CFLAGS=-Wall -Wextra -g
+LDLIBS=
 
 SRCS=top_proc.c example.c
 OBJS=$(subst .c,.o,$(SRCS))
 
-all: example
+EXAMPLE=top_proc_example
 
-example: $(OBJS)
-	$(CC) $(CFLAGS) $(OBJS) $(LDLIBS) -o top_proc_example
+all: $(EXAMPLE)
+
+$(EXAMPLE): $(OBJS)
+	$(CC) $(CFLAGS) $(LDLIBS) $(OBJS) -o $(EXAMPLE)
 
 clean:
-	rm $(OBJS) top_proc_example
+	rm -f $(OBJS) $(EXAMPLE)
