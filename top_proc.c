@@ -99,7 +99,7 @@ int read_proc(proc_t** procs, unsigned int* procs_size) {
 
             proc_t* newprocs = (proc_t*)realloc(*procs, (*procs_size + 1) * sizeof(proc_t));
             if (newprocs == NULL) {
-                perror("Realloc failed");
+                perror("realloc() failed");
                 return -1;
             }
 
@@ -209,7 +209,12 @@ void sample_processes(
 
     // merge
     *result_size = (procs1_len < procs2_len ? procs1_len : procs2_len);
-    *result = calloc(*result_size, sizeof(proc_t));
+    proc_t* tmp = calloc(*result_size, sizeof(proc_t));
+    if (tmp == NULL) {
+        perror("calloc() failed");
+        return -1;
+    }
+    *result = tmp;
     unsigned int pos1 = 0, pos2 = 0;
     unsigned int newpos = 0;
     while (pos1 < procs1_len && pos2 < procs2_len) {
